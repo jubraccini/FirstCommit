@@ -12,6 +12,7 @@ def limparTela():
 def aguardar(segundos):
     time.sleep(segundos)
 
+# Loop principal do programa
 while True:
     limparTela()
     print("(0) Sair")
@@ -19,10 +20,10 @@ while True:
     print("(2) Mostrar Lista")
     opcao = input()
     if opcao == "0":
-        break
+        break # Encerra o loop e o programa
     elif opcao == "1":
-        nome = input("Nome: ")
-        email = input("E-mail: ")
+        nome = input("Nome: ") # Captura o nome do aluno
+        email = input("E-mail: ") # Captura o e-mail do aluno
         with open("bd.atitus", "a") as arquivo: # Usa modo append para adicionar ao arquivo sem sobrescrever
             arquivo.write(f"{nome} {email}\n")
         aguardar(2)
