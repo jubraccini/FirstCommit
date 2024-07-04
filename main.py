@@ -23,7 +23,7 @@ while True:
     elif opcao == "1":
         nome = input("Nome: ")
         email = input("E-mail: ")
-        with open("bd.atitus", "a") as arquivo:  # Usa modo append para adicionar ao arquivo sem sobrescrever
+        with open("bd.atitus", "a") as arquivo: # Usa modo append para adicionar ao arquivo sem sobrescrever
             arquivo.write(f"{nome} {email}\n")
         aguardar(2)
     elif opcao == "2":
